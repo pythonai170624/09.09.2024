@@ -6,7 +6,7 @@ cursor: any = None
 
 def connect(file_name: str) -> any:
     global conn, cursor
-    conn = sqlite3.connect('hw.db')
+    conn = sqlite3.connect(file_name)
     conn.row_factory = sqlite3.Row # allow to use column names
     cursor = conn.cursor()  # Create cursor
 
